@@ -105,6 +105,27 @@ def hbar_char(x:str, y:str, hue:str, data, title:str, suptitle:str, xlabel:str, 
 
 def scatter_char(xlabel:str, ylabel:str, data, x:str, y:str, size:str=None, sizes:tuple=None, hue:str=None, title:str='', suptitle:str='',
                  figsize=(10, 6), palette:str='inferno_r', legend:bool=True):
+    """
+    Crea un gráfico de dispersión personalizado usando Seaborn y Matplotlib.
+
+    Parámetros:
+        xlabel (str): Etiqueta del eje X.
+        ylabel (str): Etiqueta del eje Y.
+        data (DataFrame): DataFrame de pandas con los datos a graficar.
+        x (str): Nombre de la columna para el eje X.
+        y (str): Nombre de la columna para el eje Y.
+        size (str, opcional): Nombre de la columna para el tamaño de los puntos. Por defecto None.
+        sizes (tuple, opcional): Rango de tamaños de los puntos. Por defecto None.
+        hue (str, opcional): Nombre de la columna para agrupar por color. Por defecto None.
+        title (str, opcional): Título secundario del gráfico. Por defecto vacío.
+        suptitle (str, opcional): Título principal del gráfico. Por defecto vacío.
+        figsize (tuple, opcional): Tamaño de la figura (ancho, alto). Por defecto (10, 6).
+        palette (str, opcional): Paleta de colores de Seaborn. Por defecto 'inferno_r'.
+        legend (bool, opcional): Si se muestra la leyenda. Por defecto True.
+
+    Retorna:
+        fig (matplotlib.figure.Figure): Objeto figura de Matplotlib listo para mostrar en Streamlit.
+    """
     
     import matplotlib.pyplot as plt
     import seaborn as sns
