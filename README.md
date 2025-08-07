@@ -6,6 +6,17 @@ El archivo main.py es un código de streamlit con el que se creó una web para m
 
 El archivo visualizaciones contiene algunas funciones usadas para presentar graficos en el archivo main.py
 
-El archivo de requerimientos contiene las versiones usadas para la web de streamlit
+El archivo de requerimientos contiene algunas de las librerias usadas y se utiliza para instalar las dependencias de streamlit
+sin embargo, las versiones son las siguientes:
+
+streamlit==1.35.0
+
+pandas==2.2.2
+
+matplotlib<=3.8.4
+
+seaborn==0.13.2
+
+plotly==5.22.0
 
 Los requerimientos del archivo de google colab estan dentro del mismo
