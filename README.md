@@ -13,7 +13,7 @@ streamlit==1.35.0
 
 pandas==2.2.2
 
-matplotlib<=3.8.4
+matplotlib==3.8.4
 
 seaborn==0.13.2
 
