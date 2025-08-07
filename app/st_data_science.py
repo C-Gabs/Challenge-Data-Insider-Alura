@@ -39,9 +39,8 @@ colores_personalizados = [
     '#dbdb8d',  # Amarillo pálido
     '#9edae5'   # Celeste pálido
 ]
-
-@st.cache_data(llt=60)
-def seccion(pregunta:str, df, fig, informe:str):
+@st.cache_data(ttl=60)
+def seccion(pregunta:str, df, _fig, informe:str):
     """
     Muestra una sección de visualización en Streamlit con pregunta, datos, gráfico y análisis.
 
