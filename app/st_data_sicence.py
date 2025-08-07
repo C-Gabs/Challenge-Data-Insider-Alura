@@ -40,8 +40,20 @@ colores_personalizados = [
     '#9edae5'   # Celeste pálido
 ]
 
-
+@st.cache_data(llt=60)
 def seccion(pregunta:str, df, fig, informe:str):
+    """
+    Muestra una sección de visualización en Streamlit con pregunta, datos, gráfico y análisis.
+
+    Parámetros:
+        pregunta (str): Texto de la pregunta o título de la sección.
+        df (DataFrame): DataFrame de pandas con los datos a mostrar.
+        fig: Figura de Matplotlib o Plotly a mostrar.
+        informe (str): Texto descriptivo o análisis del gráfico.
+
+    Retorna:
+        None. La función muestra los elementos en la interfaz de Streamlit.
+    """
     import matplotlib.figure
     
     st.subheader(pregunta)
