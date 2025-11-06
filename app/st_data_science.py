@@ -294,16 +294,16 @@ with tab1:
     pregunta = 'Considerando el histórico de valores de las acciones en el año 2022 de las 5 empresas de tu elección, \
     Indica ¿Cuál fue la mejor semana para comprar y cuál para vender respectivamente?'
 
-    df_polygon = pd.read_csv('Data/datos_polygon.csv', parse_dates=['Fecha'])
+    df_massive = pd.read_csv('Data/datos_massive.csv', parse_dates=['Fecha'])
 
-    df_polygon_semanal = pd.read_csv('Data/polygon_semanal.csv', parse_dates=['Fecha'])
+    df_massive_semanal = pd.read_csv('Data/massive_semanal.csv', parse_dates=['Fecha'])
 
-    mejor_semana_compra = df_polygon_semanal.loc[df_polygon_semanal.groupby('Symbol')['Precio_Cierre_Promedio'].idxmin()]
+    mejor_semana_compra = df_massive_semanal.loc[df_massive_semanal.groupby('Symbol')['Precio_Cierre_Promedio'].idxmin()]
 
-    mejor_semana_venta = df_polygon_semanal.loc[df_polygon_semanal.groupby('Symbol')['Precio_Cierre_Promedio'].idxmax()]
+    mejor_semana_venta = df_massive_semanal.loc[df_massive_semanal.groupby('Symbol')['Precio_Cierre_Promedio'].idxmax()]
 
-    fig = px.line(df_polygon, x='Fecha', y='Precio_Cierre', color='Symbol',
-                title=f'Precio de cierre diario de las acciones<br>{df_polygon["Symbol"].unique()}',
+    fig = px.line(df_massive, x='Fecha', y='Precio_Cierre', color='Symbol',
+                title=f'Precio de cierre diario de las acciones<br>{df_massive["Symbol"].unique()}',
                 labels={'Precio_Cierre': 'Precio de Cierre'}, width=1500, height=500)
 
     fig.add_trace(go.Scatter(x=mejor_semana_venta['Fecha'], y=mejor_semana_venta['Precio_Cierre_Promedio'],
@@ -337,7 +337,7 @@ with tab1:
         SQNXF: Semana 8, Fecha 2024-02-21, Precio de Cierre Promedio: 44.67
         UBSFF: Semana 7, Fecha 2024-02-16, Precio de Cierre Promedio: 26.09'''
 
-    seccion(pregunta, df_polygon_semanal, fig, informe)
+    seccion(pregunta, df_massive_semanal, fig, informe)
 
 with tab2:
 
