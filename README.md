@@ -20,3 +20,7 @@ seaborn==0.13.2
 plotly==5.22.0
 
 Los requerimientos del archivo de google colab estan dentro del mismo
+
+
+El enlace para acceder a la app web es el siguiente:
+https://challenge-data-insider.streamlit.app
